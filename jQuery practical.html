@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <!-- CSS STYLE START -->
+
+    <style>
+         *{
+            border: 2px solid darkgrey;
+            padding: 20px;
+            display: block;
+        }
+    </style>
+
+    <!-- CSS STYLE END -->
+
+</head>
+
+<!-- HTML START -->
+
+<body>body (great-great-grandparent)
+    <div>div(great-grandparent)
+        <ul>ul grandparent
+            <li>li (direct parent)
+                <span>span</span>
+            </li>
+        </ul>
+    </div>
+
+<!-- HTML END -->
+
+<!-- SCRIPT  START -->
+
+    <script>
+        $(document).ready (function () {
+            
+            $("span").parentsUntil().css({"border":"3px solid red"})
+            // $("li").parent().css({"border":"2px solid green"})
+            // $("li").parents("ul").css({"border":"2px solid green"})
+        })
+    </script>
+
+<!-- SCRIPT  END -->
+
+</body>
+</html>
+
